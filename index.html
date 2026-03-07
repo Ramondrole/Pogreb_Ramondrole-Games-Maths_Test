@@ -1,0 +1,131 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Математический тест</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="gradient">
+    <div class="logo">RAMONDROLE</div>
+    <h1>Нажми на кнопку и получи задание :-)</h1>
+    <br>
+    <br>
+    <br>
+    <button class="add">Сложить</button>
+    <button class="subtract">Вычесть</button>
+    <button class="multiply">Умножить</button>
+    <button class="divide">Разделить</button>
+    <br>
+    <br>
+    <br>
+    <p>Выбрать уровень</p>
+    <select>
+      <option value="easy">легкий (от 1 до 9)</option>
+      <option value="medium">средний (от 10 до 99)</option>
+      <option value="hard">тяжелый (от 100 до 999)</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <button class="check">Посмотреть стастику</button>
+    <button class="reset">Сбросить</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="https://ramondrole.github.io/Pogreb_Ramondrole-Games/">назад</a>
+    
+    <script>
+      let correct = 0;
+      let mistakes = 0;
+      let min = 1;
+      let max = 9;
+      function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+      document.querySelector(".add").onclick = function () {
+        let numA = getRandomInt(min, max);
+        let numB = getRandomInt(min, max);
+        let correctAnswer = numA + numB;
+        let userAnswer = prompt(numA + " + " + numB + " = ", "");
+        console.log(correctAnswer, userAnswer);
+        checkAnswer(correctAnswer, userAnswer);
+      };
+      function checkAnswer(correctAnswer, userAnswer) {
+        correctAnswer = Number(correctAnswer);
+        userAnswer = Number(userAnswer);
+        switch (userAnswer) {
+          case correctAnswer:
+          correct++;
+            alert("Ты прав!");
+            
+            break;
+          default:
+            mistakes++;
+            alert(
+              "Неправильно" +
+                userAnswer +
+                " неправильный ответ" +
+                "Правильный ответ " +
+                correctAnswer +
+                "."
+            );
+            break;
+        }
+      }
+      document.querySelector(".subtract").onclick = function () {
+        let numA = getRandomInt(min, max);
+        let numB = getRandomInt(min, max);
+        let correctAnswer = numA - numB;
+        let userAnswer = prompt(numA + " - " + numB + " = ", "");
+        console.log(correctAnswer, userAnswer);
+        checkAnswer(correctAnswer, userAnswer);
+      };
+      document.querySelector(".multiply").onclick = function () {
+        let numA = getRandomInt(min, max);
+        let numB = getRandomInt(min, max);
+        let correctAnswer = numA * numB;
+        let userAnswer = prompt(numA + " * " + numB + " = ", "");
+        console.log(correctAnswer, userAnswer);
+        checkAnswer(correctAnswer, userAnswer);
+      };
+      document.querySelector(".divide").onclick = function () {
+        let numA = getRandomInt(min, max);
+        let numB = getRandomInt(min, max);
+        let correctAnswer = numA / numB;
+        let userAnswer = prompt(numA + " : " + numB + " = ", "");
+        console.log(correctAnswer, userAnswer);
+        checkAnswer(correctAnswer, userAnswer);
+      };
+      document.querySelector("select").onchange = function () {
+        let value = document.querySelector("select").value;
+        console.log(value);
+        switch (value) {
+          case "easy":
+            min = 1;
+            max = 9;
+            break;
+          case "medium":
+            min = 10;
+            max = 99;
+            break;
+          case "hard":
+            min = 100;
+            max = 999;
+            break;
+        }
+      };
+      document.querySelector(".check").onclick = function () {
+        alert("ИТОГО:\n" + correct + " правильных ответов \n" + mistakes + " неправильных ответов");
+      };
+      document.querySelector(".reset").onclick = function () {
+        correct = 0;
+        mistakes = 0;
+        alert("Результуты сброшены")
+      }
+    </script>
+  </body>
+</html>
