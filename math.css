@@ -1,0 +1,83 @@
+.math-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.math-wrapper h1 {
+    border-left: none;
+    border-bottom: 6px solid #b31b1b;
+    padding-bottom: 15px;
+}
+
+.math-btn {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-left: 4px solid #b31b1b;
+    color: #ffffff;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    font-size: 1.3rem;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+.math-btn:hover {
+    transform: translate(-2px, -2px);
+    border-color: #b31b1b;
+    box-shadow: 6px 6px 0 rgba(179, 27, 27, 0.3);
+}
+
+.add-btn { border-left-color: #00aa44; }
+.subtract-btn { border-left-color: #ff4444; }
+.multiply-btn { border-left-color: #ffaa00; }
+.divide-btn { border-left-color: #cc00cc; }
+
+.difficulty-section {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-left: 6px solid #b31b1b;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.5);
+}
+
+.difficulty-label {
+    color: #888899;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    margin-bottom: 15px;
+}
+
+#difficultySelect {
+    background: #0a0a0a;
+    border: 1px solid #2a2a2a;
+    border-left: 4px solid #b31b1b;
+    color: #ffffff;
+    padding: 12px 20px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+.stats-btn {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-left: 4px solid #b31b1b;
+    color: #ffffff;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+}
+
+.stats-btn:hover {
+    transform: translate(-2px, -2px);
+    border-color: #b31b1b;
+}
+
+.check-btn { border-left-color: #00aa44; }
+.reset-btn { border-left-color: #ff4444; }
